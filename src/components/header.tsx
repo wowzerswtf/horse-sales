@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SITE } from "@/lib/config";
 
 export function Header() {
   return (
@@ -9,14 +10,14 @@ export function Header() {
           <span>
             Call or text:{" "}
             <a
-              href="tel:+15551234567"
+              href={SITE.phoneHref}
               className="font-semibold text-brand-gold hover:text-brand-tan"
             >
-              (555) 123-4567
+              {SITE.phone}
             </a>
           </span>
           <span className="hidden sm:inline">
-            Weatherford, TX &middot; Serving buyers nationwide
+            {SITE.location} &middot; Serving buyers nationwide
           </span>
         </div>
       </div>
@@ -26,10 +27,10 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3">
             <div className="flex flex-col">
               <span className="text-xl font-bold tracking-tight text-brand-gold">
-                IRON HIDE
+                {SITE.name.toUpperCase()}
               </span>
               <span className="text-[10px] uppercase tracking-[0.3em] text-brand-tan">
-                Performance Horse Sales
+                {SITE.tagline}
               </span>
             </div>
           </Link>

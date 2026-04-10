@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { SITE } from "@/lib/config";
 
 export function StickyCTA({
   horseName,
@@ -32,7 +33,7 @@ export function StickyCTA({
         </div>
         <div className="flex shrink-0 gap-2">
           <a
-            href="tel:+15551234567"
+            href={SITE.phoneHref}
             className="rounded bg-brand-dark px-3 py-2.5 text-xs font-bold text-white"
             aria-label="Call about this horse"
           >

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ExitIntentPopup } from "@/components/exit-intent-popup";
+import { SITE } from "@/lib/config";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,23 +18,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Iron Hide Performance Horse Sales",
-    template: "%s | Iron Hide Performance Horse Sales",
+    default: SITE.fullName,
+    template: `%s | ${SITE.fullName}`,
   },
-  description:
-    "The most transparent horse sales in America. Cutting horses, reining horses, cow horses, team penning & sorting horses for sale. Deal rooms with full video, pedigree, and vet records.",
-  keywords: [
-    "cutting horses for sale",
-    "reining horses for sale",
-    "cow horse for sale",
-    "team penning horse",
-    "team sorting horse",
-    "NCHA horse",
-    "NRHA horse",
-    "NRCHA horse",
-    "performance horse sales",
-    "horse sales Texas",
-  ],
+  description: SITE.description,
+  keywords: [...SITE.keywords],
 };
 
 export default function RootLayout({

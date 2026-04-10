@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { Discipline, BudgetRange } from "@/lib/types";
 import { DISCIPLINE_LABELS, BUDGET_LABELS } from "@/lib/types";
+import { SITE } from "@/lib/config";
 
 type Step = "intro" | "discipline" | "budget" | "experience" | "timeline" | "email" | "done";
 
@@ -362,7 +363,7 @@ export function QuizFunnel() {
                 Browse Horses Now
               </a>
               <a
-                href="tel:+15551234567"
+                href={SITE.phoneHref}
                 className="flex-1 rounded-lg border-2 border-brand-brown py-3 text-center font-bold text-brand-brown transition hover:bg-brand-brown hover:text-white"
               >
                 Call Us Direct

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { SITE } from "@/lib/config";
 
 function Modal({
   open,
@@ -57,13 +58,13 @@ export function TermsLink() {
       </button>
       <Modal open={open} onClose={() => setOpen(false)} title="Terms of Service">
         <p className="font-semibold text-brand-dark">
-          Iron Hide Performance Horse Sales — Terms of Service
+          {SITE.fullName} — Terms of Service
         </p>
         <p className="mt-2">Last updated: April 2026</p>
 
         <h3 className="mt-4 font-semibold text-brand-dark">1. Agreement</h3>
         <p className="mt-1">
-          By accessing or using the Iron Hide Performance Horse Sales website
+          By accessing or using the {SITE.fullName} website
           (&ldquo;Site&rdquo;), you agree to be bound by these Terms of Service.
           If you do not agree, do not use the Site.
         </p>
@@ -140,8 +141,8 @@ export function TermsLink() {
 
         <h3 className="mt-4 font-semibold text-brand-dark">9. Contact</h3>
         <p className="mt-1">
-          For questions about these Terms, contact us at info@ironhidehorses.com
-          or (555) 123-4567.
+          For questions about these Terms, contact us at {SITE.email}
+          or {SITE.phone}.
         </p>
       </Modal>
     </>
@@ -165,7 +166,7 @@ export function PrivacyLink() {
         title="Privacy Policy"
       >
         <p className="font-semibold text-brand-dark">
-          Iron Hide Performance Horse Sales — Privacy Policy
+          {SITE.fullName} — Privacy Policy
         </p>
         <p className="mt-2">Last updated: April 2026</p>
 
@@ -266,7 +267,7 @@ export function PrivacyLink() {
         <p className="mt-1">
           You may request access to, correction of, or deletion of your
           personal information at any time by contacting us at
-          info@ironhidehorses.com.
+          {SITE.email}.
         </p>
 
         <h3 className="mt-4 font-semibold text-brand-dark">9. Contact</h3>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getHorseBySlug, formatPrice, horses } from "@/lib/horses";
 import { DISCIPLINE_LABELS } from "@/lib/types";
+import { SITE } from "@/lib/config";
 import { PedigreeChart } from "@/components/deal-room/pedigree-chart";
 import { InquiryForm } from "@/components/deal-room/inquiry-form";
 import { ShareUrl } from "@/components/deal-room/share-url";
@@ -181,7 +182,7 @@ export default async function DealRoomPage({ params }: Props) {
                     Our Take
                   </h2>
                   <p className="text-xs text-brand-dark/50">
-                    Iron Hide Performance Horse Sales
+                    {SITE.fullName}
                   </p>
                 </div>
               </div>
@@ -330,10 +331,10 @@ export default async function DealRoomPage({ params }: Props) {
                 you&apos;d like.
               </p>
               <a
-                href="tel:+15551234567"
+                href={SITE.phoneHref}
                 className="mt-3 block w-full rounded border-2 border-brand-brown py-2.5 text-center text-sm font-bold text-brand-brown transition hover:bg-brand-brown hover:text-white"
               >
-                Call (555) 123-4567
+                Call {SITE.phone}
               </a>
               <p className="mt-2 text-center text-[10px] text-brand-dark/40">
                 Or text us — we respond fast

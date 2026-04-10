@@ -1,5 +1,6 @@
 import { QuizFunnel } from "@/components/quiz-funnel";
 import { TermsLink, PrivacyLink } from "@/components/legal-modals";
+import { SITE } from "@/lib/config";
 
 export default function QuizPage() {
   return (
@@ -9,17 +10,17 @@ export default function QuizPage() {
         <div className="mx-auto flex max-w-3xl items-center justify-between">
           <div>
             <span className="text-lg font-bold text-brand-gold">
-              IRON HIDE
+              {SITE.name.toUpperCase()}
             </span>
             <span className="ml-2 hidden text-[10px] uppercase tracking-[0.2em] text-brand-tan sm:inline">
-              | Performance Horse Sales
+              | {SITE.tagline}
             </span>
           </div>
           <a
-            href="tel:+15551234567"
+            href={SITE.phoneHref}
             className="text-xs text-white/50 hover:text-brand-gold"
           >
-            (555) 123-4567
+            {SITE.phone}
           </a>
         </div>
       </div>
@@ -83,8 +84,8 @@ export default function QuizPage() {
           ))}
         </div>
         <p className="mt-3 text-[10px] text-white/20">
-          &copy; {new Date().getFullYear()} Iron Hide &middot; Weatherford, TX
-          &middot;{" "}
+          &copy; {new Date().getFullYear()} {SITE.name} &middot;{" "}
+          {SITE.location} &middot;{" "}
           <TermsLink /> &middot; <PrivacyLink />
         </p>
       </div>
