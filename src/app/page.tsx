@@ -15,7 +15,7 @@ export default function HomePage() {
           src="/founder.jpg"
           alt=""
           fill
-          className="object-cover object-top opacity-10 scale-110"
+          className="object-cover object-top opacity-20 scale-110"
           sizes="100vw"
           priority
         />
