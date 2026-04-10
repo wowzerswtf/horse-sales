@@ -40,7 +40,7 @@ export function ViewerCount({ slug }: { slug: string }) {
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
         <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
       </span>
-      <span className="font-medium text-brand-dark">
+      <span className="font-medium text-white">
         {viewers} people viewing this listing
       </span>
     </div>

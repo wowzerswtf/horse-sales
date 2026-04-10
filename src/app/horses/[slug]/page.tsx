@@ -5,6 +5,8 @@ import { DISCIPLINE_LABELS } from "@/lib/types";
 import { PedigreeChart } from "@/components/deal-room/pedigree-chart";
 import { InquiryForm } from "@/components/deal-room/inquiry-form";
 import { ShareUrl } from "@/components/deal-room/share-url";
+import { FAQSection } from "@/components/deal-room/faq-section";
+import { StickyCTA } from "@/components/sticky-cta";
 import {
   ViewerCount,
   RecentActivity,
@@ -257,6 +259,16 @@ export default async function DealRoomPage({ params }: Props) {
                 recommend a PPE before any purchase. All sales are final.
               </p>
             </section>
+
+            {/* FAQ — conversion bible: answer buyer questions on page */}
+            <section>
+              <h2 className="text-xl font-bold text-brand-dark">
+                Frequently Asked Questions
+              </h2>
+              <div className="mt-4">
+                <FAQSection />
+              </div>
+            </section>
           </div>
 
           {/* Sidebar */}
@@ -278,7 +290,7 @@ export default async function DealRoomPage({ params }: Props) {
 
               <hr className="my-4 border-brand-tan/20" />
 
-              <h3 className="font-bold text-brand-dark">
+              <h3 id="inquire" className="font-bold text-brand-dark">
                 Inquire About {horse.barnName}
               </h3>
               <p className="mt-1 text-xs text-brand-dark/50">
@@ -292,6 +304,40 @@ export default async function DealRoomPage({ params }: Props) {
                   horseName={horse.barnName}
                 />
               </div>
+
+              {/* Social proof next to friction point */}
+              <div className="mt-4 rounded-lg bg-brand-cream p-3">
+                <p className="text-xs italic text-brand-dark/60">
+                  &ldquo;I was nervous buying a horse sight-unseen from across
+                  the country. The Deal Room had everything — videos, vet
+                  records, pedigree. I flew out, rode him once, and trailered
+                  him home that weekend.&rdquo;
+                </p>
+                <p className="mt-1 text-[10px] font-semibold text-brand-dark/40">
+                  — Future buyer testimonial
+                </p>
+              </div>
+            </div>
+
+            {/* Schedule a Video Call — virtual outfitting for high-ticket */}
+            <div className="rounded-lg bg-white p-6 shadow-md">
+              <h3 className="font-bold text-brand-dark">
+                Prefer to Talk First?
+              </h3>
+              <p className="mt-1 text-xs text-brand-dark/50">
+                Schedule a 1-on-1 video call. We&apos;ll walk you through
+                this horse, answer questions, and show you live video if
+                you&apos;d like.
+              </p>
+              <a
+                href="tel:+15551234567"
+                className="mt-3 block w-full rounded border-2 border-brand-brown py-2.5 text-center text-sm font-bold text-brand-brown transition hover:bg-brand-brown hover:text-white"
+              >
+                Call (555) 123-4567
+              </a>
+              <p className="mt-2 text-center text-[10px] text-brand-dark/40">
+                Or text us — we respond fast
+              </p>
             </div>
 
             {/* Quick facts */}
@@ -330,6 +376,9 @@ export default async function DealRoomPage({ params }: Props) {
           </aside>
         </div>
       </div>
+
+      {/* Sticky CTA on mobile — always visible inquiry button */}
+      <StickyCTA horseName={horse.barnName} price={formatPrice(horse.price)} />
     </article>
   );
 }

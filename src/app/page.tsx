@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { HorseCard } from "@/components/horse-card";
+import { HorseFinderQuiz } from "@/components/horse-finder-quiz";
 import { getFeaturedHorses } from "@/lib/horses";
 
 export default function HomePage() {
@@ -8,8 +10,16 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-brand-dark py-24 text-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-brown/40 to-brand-dark" />
+      <section className="relative overflow-hidden bg-brand-dark py-24 text-white">
+        <Image
+          src="/founder.jpg"
+          alt=""
+          fill
+          className="object-cover object-top opacity-10 scale-110"
+          sizes="100vw"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-brown/60 to-brand-dark/90" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-gold">
@@ -56,6 +66,25 @@ export default function HomePage() {
           <span>PPE Available</span>
           <span className="hidden h-4 w-px bg-brand-tan/30 sm:block" />
           <span>Published Prices</span>
+        </div>
+      </section>
+
+      {/* As Seen In — credibility for new visitors */}
+      <section className="border-b border-brand-tan/20 bg-white py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="mb-4 text-center text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-dark/30">
+            Trusted by riders competing with
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+            {["NCHA", "NRHA", "NRCHA", "AQHA", "USTPA"].map((org) => (
+              <span
+                key={org}
+                className="text-lg font-bold tracking-wide text-brand-dark/15 sm:text-xl"
+              >
+                {org}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -142,7 +171,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Horse Finder Quiz — self-qualification + email capture */}
+      <section className="py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1fr_420px]">
+            <div className="flex flex-col justify-center">
+              <p className="text-sm font-semibold uppercase tracking-wider text-brand-gold">
+                Not sure where to start?
+              </p>
+              <h2 className="mt-2 text-2xl font-bold text-brand-dark sm:text-3xl">
+                Find Your Horse in 30 Seconds
+              </h2>
+              <p className="mt-3 text-brand-dark/60">
+                Answer 3 quick questions and we&apos;ll match you with horses
+                that fit your discipline, budget, and experience level. Plus
+                you&apos;ll get our free Market Report and 48-hour First Look
+                access.
+              </p>
+              <div className="mt-6 flex items-center gap-4 text-sm text-brand-dark/50">
+                <span className="flex items-center gap-1.5">
+                  <span className="text-brand-gold">&#10003;</span> 30 seconds
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="text-brand-gold">&#10003;</span> Free market report
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="text-brand-gold">&#10003;</span> No spam
+                </span>
+              </div>
+            </div>
+            <HorseFinderQuiz />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA + cause-based incentive */}
       <section className="bg-brand-brown py-16 text-white">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold sm:text-3xl">
