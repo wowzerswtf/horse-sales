@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Iron Hide Performance Horse Brokers — the most transparent horse broker in America. Cutting, reining, cow horse, team penning & sorting.",
+    "Iron Hide Performance Horse Sales — the most transparent horse sales company in America. Cutting, reining, cow horse, team penning & sorting.",
 };
 
 export default function AboutPage() {
@@ -12,7 +12,7 @@ export default function AboutPage() {
     <div className="py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-bold text-brand-dark sm:text-4xl">
-          The Most Transparent Horse Broker in America
+          The Most Transparent Horse Sales Company in America
         </h1>
 
         <div className="mt-8 space-y-6 text-brand-dark/80">

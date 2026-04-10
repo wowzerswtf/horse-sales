@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Iron Hide Performance Horse Brokers",
-    template: "%s | Iron Hide Performance Horse Brokers",
+    default: "Iron Hide Performance Horse Sales",
+    template: "%s | Iron Hide Performance Horse Sales",
   },
   description:
-    "The most transparent horse broker in America. Cutting horses, reining horses, cow horses, team penning & sorting horses for sale. Deal rooms with full video, pedigree, and vet records.",
+    "The most transparent horse sales in America. Cutting horses, reining horses, cow horses, team penning & sorting horses for sale. Deal rooms with full video, pedigree, and vet records.",
   keywords: [
     "cutting horses for sale",
     "reining horses for sale",
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     "NCHA horse",
     "NRHA horse",
     "NRCHA horse",
-    "performance horse broker",
-    "horse broker Texas",
+    "performance horse sales",
+    "horse sales Texas",
   ],
 };
 

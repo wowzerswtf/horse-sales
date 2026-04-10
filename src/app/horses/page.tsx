@@ -5,7 +5,7 @@ import { getAvailableHorses } from "@/lib/horses";
 export const metadata: Metadata = {
   title: "Horses For Sale",
   description:
-    "Browse cutting horses, reining horses, cow horses, team penning and sorting horses for sale. Each horse has a full Deal Room with video, pedigree, vet records, and broker assessment.",
+    "Browse cutting horses, reining horses, cow horses, team penning and sorting horses for sale. Each horse has a full Deal Room with video, pedigree, vet records, and honest assessment.",
 };
 
 export default function HorsesPage() {

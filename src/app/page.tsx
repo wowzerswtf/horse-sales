@@ -15,7 +15,7 @@ export default function HomePage() {
           src="/founder.jpg"
           alt=""
           fill
-          className="object-cover object-top opacity-20 scale-110"
+          className="object-cover object-top opacity-30 scale-110"
           sizes="100vw"
           priority
         />
@@ -33,7 +33,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 text-lg text-white/70">
               Full-transparency Deal Rooms with video, pedigree, vet records, and
-              our honest broker assessment on every horse. No guesswork. No
+              our honest assessment on every horse. No guesswork. No
               surprises. Just the right horse for you.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -155,7 +155,7 @@ export default function HomePage() {
               },
               {
                 step: "04",
-                title: "Broker's Take",
+                title: "Our Take",
                 desc: "Our honest, written assessment of every horse. We put our name and reputation on every listing.",
               },
             ].map((item) => (

@@ -24,7 +24,7 @@ const FAQS = [
     a: "Yes, all sales are final. This is why we strongly recommend a Pre-Purchase Exam before every purchase and encourage you to ride the horse in person. We are fully transparent about every horse's history, health, and training — the Deal Room shows you everything.",
   },
   {
-    q: "Why should I buy through a broker instead of direct?",
+    q: "Why should I buy through Iron Hide instead of direct?",
     a: "We vet every horse before listing — checking training, soundness, temperament, and history. We handle negotiations, paperwork, and shipping logistics. Our reputation is on the line with every sale, which means we only list horses we believe in. You also get access to horses that aren't publicly listed yet through our First Look email list.",
   },
 ];

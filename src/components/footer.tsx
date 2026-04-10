@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TermsLink, PrivacyLink } from "@/components/legal-modals";
 
 export function Footer() {
   return (
@@ -8,10 +9,10 @@ export function Footer() {
           <div>
             <p className="text-lg font-bold text-brand-gold">IRON HIDE</p>
             <p className="mt-1 text-xs uppercase tracking-[0.3em] text-brand-tan">
-              Performance Horse Brokers
+              Performance Horse Sales
             </p>
             <p className="mt-4 text-sm">
-              The most transparent horse broker in America. Cutting, Reining, Cow
+              The most transparent horse sales company in America. Cutting, Reining, Cow
               Horse, Team Penning & Sorting.
             </p>
           </div>
@@ -48,8 +49,13 @@ export function Footer() {
         </div>
 
         <div className="mt-8 border-t border-white/10 pt-8 text-center text-xs text-white/40">
-          &copy; {new Date().getFullYear()} Iron Hide Performance Horse Brokers.
-          All rights reserved.
+          <p>
+            &copy; {new Date().getFullYear()} Iron Hide Performance Horse Sales.
+            All rights reserved.
+          </p>
+          <p className="mt-2 flex items-center justify-center gap-3">
+            <TermsLink /> <span>&middot;</span> <PrivacyLink />
+          </p>
         </div>
       </div>
     </footer>

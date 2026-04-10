@@ -170,7 +170,7 @@ export default async function DealRoomPage({ params }: Props) {
               </p>
             </section>
 
-            {/* Broker's Take */}
+            {/* Our Take */}
             <section className="rounded-lg border-2 border-brand-gold/30 bg-brand-gold/5 p-6">
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-gold text-sm font-bold text-brand-dark">
@@ -178,10 +178,10 @@ export default async function DealRoomPage({ params }: Props) {
                 </div>
                 <div>
                   <h2 className="font-bold text-brand-dark">
-                    The Broker&apos;s Take
+                    Our Take
                   </h2>
                   <p className="text-xs text-brand-dark/50">
-                    Iron Hide Performance Horse Brokers
+                    Iron Hide Performance Horse Sales
                   </p>
                 </div>
               </div>

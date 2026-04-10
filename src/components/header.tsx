@@ -29,7 +29,7 @@ export function Header() {
                 IRON HIDE
               </span>
               <span className="text-[10px] uppercase tracking-[0.3em] text-brand-tan">
-                Performance Horse Brokers
+                Performance Horse Sales
               </span>
             </div>
           </Link>
